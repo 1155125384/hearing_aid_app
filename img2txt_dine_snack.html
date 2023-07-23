@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圖片轉換文字（用膳）</title>
+    <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">圖片轉換文字（用膳）</span>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">健聽翻譯器</span>
+                </div>
+
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-refresh icon"></i>
+                                <span class="link">切換角色</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="guide.html" class="nav-link">
+                                <i class="bx bx-book-reader icon"></i>
+                                <span class="link">用戶指引</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="txt2img_index.html" class="nav-link">
+                                <i class="bx bx-message-rounded icon"></i>
+                                <span class="link">文字轉換圖片</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="img2txt_index.html" class="nav-link">
+                                <i class="bx bx-images icon"></i>
+                                <span class="link">圖片轉換文字</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="pharse_index.html" class="nav-link">
+                                <i class="bx bx-chat icon"></i>
+                                <span class="link">常用詞彙</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header_blank_div"></div>
+
+        <div class="intro_div">
+            <h1 class="intro_txt">請選擇甜品、零食種類</h1>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃雞蛋仔');">
+                <img src="img/dine/snack/waffles.png">
+                <p>鬆餅</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃巧克力');">
+                <img src="img/dine/snack/chocolate.png">
+                <p>巧克力</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃薯片');">
+                <img src="img/dine/snack/chips.png">
+                <p>薯片</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃糖果');">
+                <img src="img/dine/snack/candy.png">
+                <p>糖果</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃餅乾');">
+                <img src="img/dine/snack/cookies.png">
+                <p>餅乾</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃蛋糕');">
+                <img src="img/dine/snack/cake.png">
+                <p>蛋糕</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃果凍');">
+                <img src="img/dine/snack/jelly.png">
+                <p>果凍</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃冰淇淋');">
+                <img src="img/dine/snack/ice_cream.png">
+                <p>冰淇淋</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃棉花糖');">
+                <img src="img/dine/snack/cotton.png">
+                <p>棉花糖</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃布丁');">
+                <img src="img/dine/snack/pudding.png">
+                <p>布丁</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想吃甜品/零食，會使用其他方法表達我想吃的菜式');">
+                <img src="img/dine/snack/snack_main.png">
+                <p>其他</p>
+            </div>
+
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="small_blank_div"></div>
+
+        <div class="back_button" onclick="window.location.href = 'img2txt_dine.html';">上一頁</div>
+        <div class="footer_blank_div"></div>
+    </div>
+
+    <section class="overlay"></section>
+    <script src="js/side_bar.js"></script>
+    <script src="js/pharse_function.js"></script>
+</body>
+
+</html>

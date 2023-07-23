@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圖片轉換文字（醫療）</title>
+    <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
+    <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">圖片轉換文字（醫療）</span>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">健聽翻譯器</span>
+                </div>
+
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-refresh icon"></i>
+                                <span class="link">切換角色</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="guide.html" class="nav-link">
+                                <i class="bx bx-book-reader icon"></i>
+                                <span class="link">用戶指引</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="txt2img_index.html" class="nav-link">
+                                <i class="bx bx-message-rounded icon"></i>
+                                <span class="link">文字轉換圖片</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="img2txt_index.html" class="nav-link">
+                                <i class="bx bx-images icon"></i>
+                                <span class="link">圖片轉換文字</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="pharse_index.html" class="nav-link">
+                                <i class="bx bx-chat icon"></i>
+                                <span class="link">常用詞彙</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header_blank_div"></div>
+
+        <div class="intro_div">
+            <h1>請選擇於股部、尾骨的症狀</h1>
+        </div>
+
+        <div class="description_div" id="brief">
+            <div class="question_div" onclick="showFullScreenOverlay('股部位置疼痛');">
+                <h1>股部位置疼痛</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('股肌痙攣');">
+                <h1>股肌痙攣</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('尾骨骨折');">
+                <h1>尾骨骨折</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('尾骨囊腫');">
+                <h1>尾骨囊腫</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('股部位置感覺麻木');">
+                <h1>感覺麻木</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('其他');">
+                <h1>其他</h1>
+            </div>
+
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="small_blank_div"></div>
+
+        <button class="go_back_button" onclick="window.location.href = 'img2txt_medical_lowerbody.html';">上一頁</button>
+        <div class = "small_blank_div"></div>
+        <button class="swap_button" onclick="window.location.href = 'phrase_medical.html';">轉到常用詞彙（醫療）</button>
+        <div class="footer_blank_div"></div>
+
+    </div>
+
+    <section class="overlay"></section>
+    <script src="js/side_bar.js"></script>
+    <script src="js/pharse_function.js"></script>
+</body>
+
+</html>

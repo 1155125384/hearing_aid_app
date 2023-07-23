@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圖片轉換文字（買菜）</title>
+    <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">圖片轉換文字（買菜）</span>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">健聽翻譯器</span>
+                </div>
+
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-refresh icon"></i>
+                                <span class="link">切換角色</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="guide.html" class="nav-link">
+                                <i class="bx bx-book-reader icon"></i>
+                                <span class="link">用戶指引</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="txt2img_index.html" class="nav-link">
+                                <i class="bx bx-message-rounded icon"></i>
+                                <span class="link">文字轉換圖片</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="img2txt_index.html" class="nav-link">
+                                <i class="bx bx-images icon"></i>
+                                <span class="link">圖片轉換文字</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="pharse_index.html" class="nav-link">
+                                <i class="bx bx-chat icon"></i>
+                                <span class="link">常用詞彙</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header_blank_div"></div>
+
+        <div class="intro_div">
+            <h1 class="intro_txt">請選擇購買種類</h1>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_fruit.html';">
+                <img src="img/market/fruit/fruit_main.png">
+                <p>水果</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_vegetable.html';">
+                <img src="img/market/vegetable/vegetable_main.png">
+                <p>蔬菜</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_meat.html';">
+                <img src="img/market/meat/meat_main.png">
+                <p>肉類</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_seafood.html';">
+                <img src="img/market/seafood/seafood_main.png">
+                <p>海鮮類</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_dairy.html';">
+                <img src="img/market/dairy/dairy_main.png">
+                <p>乳製品</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_beverage.html';">
+                <img src="img/market/beverage/beverage_main.png">
+                <p>飲料</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_seasoning.html';">
+                <img src="img/market/seasoning/seasoning_main.png">
+                <p>調味料</p>
+            </div>
+
+            <div class="grid-item" onclick="window.location.href = 'img2txt_market_other.html';">
+                <img src="img/market/other/other_main.jpg">
+                <p>其他常見種類</p>
+            </div>
+
+        </div>
+
+        <div class="small_blank_div"></div>
+
+        <div class="back_button" onclick="window.location.href = 'img2txt_index.html';">回到選擇分類</div>
+        <div class="footer_blank_div"></div>
+    </div>
+
+    <section class="overlay"></section>
+    <script src="js/side_bar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>常用詞彙（醫學）</title>
+        <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
+        <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    </head>
+
+    <body>
+        <div id="container">
+
+            <nav>
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">常用詞彙（醫學）</span>
+                </div>
+                <div class="sidebar">
+                    <div class="logo">
+                        <i class="bx bx-menu menu-icon"></i>
+                        <span class="logo-name">健聽翻譯器</span>
+                    </div>
+            
+                    <div class="sidebar-content">
+                        <ul class="lists">
+                            <li class="list">
+                                <a href="index.html" class="nav-link">
+                                    <i class="bx bx-refresh icon"></i>
+                                    <span class="link">切換角色</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="guide.html" class="nav-link">
+                                    <i class="bx bx-book-reader icon"></i>
+                                    <span class="link">用戶指引</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="txt2img_index.html" class="nav-link">
+                                    <i class="bx bx-message-rounded icon"></i>
+                                    <span class="link">文字轉換圖片</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="img2txt_index.html" class="nav-link">
+                                    <i class="bx bx-images icon"></i>
+                                    <span class="link">圖片轉換文字</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="pharse_index.html" class="nav-link">
+                                    <i class="bx bx-chat icon"></i>
+                                    <span class="link">常用詞彙</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header_blank_div"></div>
+
+            <div class="intro_div">
+                <h1>請選擇句子</h1>
+            </div>
+
+            <div class="description_div" id="brief">
+                <div class="question_div" onclick="showFullScreenOverlay('是');">
+                    <h1>是</h1>
+                </div>
+                
+                <div class="question_div" onclick="showFullScreenOverlay('否');">
+                    <h1>否</h1>
+                </div>
+                
+                <div class="question_div" onclick="showFullScreenOverlay('不清楚');">
+                    <h1>不清楚</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀非常輕微');">
+                    <h1>我的症狀非常輕微</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀略爲輕微');">
+                    <h1>我的症狀略爲輕微</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀對我的影響一般');">
+                    <h1>我的症狀對我的影響一般</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀略爲嚴重');">
+                    <h1>我的症狀略爲嚴重</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀非常嚴重');">
+                    <h1>我的症狀非常嚴重</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的症狀是什麼？你能幫我確定我的診斷嗎？');">
+                    <h1>我的症狀是什麼？你能幫我確定我的診斷嗎？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我的病情可能是由什麼引起的？');">
+                    <h1>我的病情可能是由什麼引起的？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我應該遵從哪些特定的飲食限制或指導？');">
+                    <h1>我應該遵從哪些特定的飲食限制或指導？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('有哪些警示信號或病情惡化的跡象我應該留意？');">
+                    <h1>有哪些警示信號或病情惡化的跡象我應該留意？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('這種治療方式的效果如何？');">
+                    <h1>這種治療方式的效果如何？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('這種治療方式有哪些副作用？');">
+                    <h1>這種治療方式有哪些副作用？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('這些藥物的劑量和頻率是多少？');">
+                    <h1>這些藥物的劑量和頻率是多少？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('服用藥物時，是否有特殊的注意事項或禁忌？');">
+                    <h1>服用藥物時，是否有特殊的注意事項或禁忌？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('是否需要進行進一步的檢查？');">
+                    <h1>是否需要進行進一步的檢查？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('檢查有什麼風險或不便之處？');">
+                    <h1>檢查有什麼風險或不便之處？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我可以與其他藥物或治療方式同時使用嗎？');">
+                    <h1>我可以與其他藥物或治療方式同時使用嗎？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我需要如何調整我的生活方式或日常活動來改善我的病情？');">
+                    <h1>我需要如何調整我的生活方式或日常活動來改善我的病情？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('是否有其他替代的治療方法或療法可以考慮？');">
+                    <h1>是否有其他替代的治療方法或療法可以考慮？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('這個疾病是否會影響我的長期健康？');">
+                    <h1>這個疾病是否會影響我的長期健康？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('這種疾病或病情有哪些常見的治療方式？');">
+                    <h1>這種疾病或病情有哪些常見的治療方式？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我需要進行手術嗎？');">
+                    <h1>我需要進行手術嗎？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('手術的風險和恢復時間是多少？');">
+                    <h1>手術的風險和恢復時間是多少？</h1>
+                </div>
+
+                <div class="question_div" onclick="showFullScreenOverlay('我有其他問題，我將會使用其他方法詢問，請稍等');">
+                    <h1>我有其他問題，我將會使用其他方法詢問，請稍等</h1>
+                </div>
+                
+                <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                    <div id="overlayContent">
+                        <h1 id="overlaySentence"></h1>
+                        <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "small_blank_div"></div>
+
+            <button class="go_back_button" onclick="goBack();">返回分類選項</button>
+
+            <div class = "small_blank_div"></div>
+            <button class="swap_button" onclick="window.location.href = 'img2txt_medical.html';">轉到選擇症狀（醫療）</button>
+            
+            <div class="footer_blank_div"></div>
+
+        </div>
+
+        <section class="overlay"></section>
+        <script src="js/side_bar.js"></script>
+        <script src="js/pharse_function.js"></script>
+    </body>
+</html>

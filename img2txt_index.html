@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>圖片轉換文字</title>
+        <link rel="stylesheet" type="text/css" href="css/function_index.css">
+        <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <nav>
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">圖片轉換文字</span>
+                </div>
+                <div class="sidebar">
+                    <div class="logo">
+                        <i class="bx bx-menu menu-icon"></i>
+                        <span class="logo-name">健聽翻譯器</span>
+                    </div>
+            
+                    <div class="sidebar-content">
+                        <ul class="lists">
+                            <li class="list">
+                                <a href="index.html" class="nav-link">
+                                    <i class="bx bx-refresh icon"></i>
+                                    <span class="link">切換角色</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="guide.html" class="nav-link">
+                                    <i class="bx bx-book-reader icon"></i>
+                                    <span class="link">用戶指引</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="txt2img_index.html" class="nav-link">
+                                    <i class="bx bx-message-rounded icon"></i>
+                                    <span class="link">文字轉換圖片</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="img2txt_index.html" class="nav-link">
+                                    <i class="bx bx-images icon"></i>
+                                    <span class="link">圖片轉換文字</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="pharse_index.html" class="nav-link">
+                                    <i class="bx bx-chat icon"></i>
+                                    <span class="link">常用詞彙</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header_blank_div"></div>
+
+            <div class="intro_div">
+                <h1 class="intro_txt">請選擇分類</h1>
+            </div>
+            
+            <div id="medical_div" class="function_div" onclick="window.location.href = 'img2txt_medical.html';">
+                <h1>醫療</h1>
+            </div>
+
+            <div class="small_blank_div"></div>
+
+            <div id="dine_div" class="function_div" onclick="window.location.href = 'img2txt_dine.html';">
+                <h1>用膳</h1>
+            </div>
+
+            <div class="small_blank_div"></div>
+
+            <div id="market_div" class="function_div" onclick="window.location.href = 'img2txt_market.html';">
+                <h1>買菜</h1>
+            </div>
+
+            <div class="footer_div">
+                <p>------------------ 將會新增更多分類 ------------------</p>
+            </div>
+
+            <div class="footer_blank_div"></div>
+        </div>
+
+        <section class="overlay"></section>
+        <script src="js/side_bar.js"></script>
+    </body>
+</html>

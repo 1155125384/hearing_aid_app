@@ -1,0 +1,111 @@
+/* Common setting */
+body{
+    height: 100%;
+    overflow: hidden;
+    background: #e3f2fd;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Common Content Divs*/
+.header_blank_div{
+    height: 125px;
+}
+
+.small_blank_div {
+    height: 50px;
+}
+
+.intro_div {
+    align-items: center; 
+    justify-content: center;
+    align-self: center;
+    padding-top: 20px;
+    height: 150px; 
+}
+
+.footer_blank_div {
+    height: 150px;
+}
+
+/* Unique Divs*/
+.character_div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    width: 80%;
+    height: 400px;
+    display: flex; 
+    align-items: center; 
+    border-radius: 20px;
+    align-self: center;
+}
+
+#health_div {
+    background-image: url("../img/main_page/headphone.png");
+    justify-content: flex-start; 
+}
+
+#aid_div {
+    background-image: url("../img/main_page/aid.png"); 
+    justify-content: flex-end;
+}
+
+#footer_div {
+    padding: 20px;
+    height: 100px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Unique Text or Button Design */
+.intro_txt{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.character_txt{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#health_txt {
+    color: black;
+    margin-left: 20px;
+}
+
+#aid_txt {
+    color: white;
+    margin-right: 20px;
+}
+
+.guide_button {
+    display: inline-block;
+    padding: 15px 30px;
+    height: 50px;
+    width: 20%;
+    align-self: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #243e88;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.guide_button:hover {
+    background-color: #14244e;
+}
+
+
+
+  

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圖片轉換文字（買菜）</title>
+    <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">圖片轉換文字（買菜）</span>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">健聽翻譯器</span>
+                </div>
+
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-refresh icon"></i>
+                                <span class="link">切換角色</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="guide.html" class="nav-link">
+                                <i class="bx bx-book-reader icon"></i>
+                                <span class="link">用戶指引</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="txt2img_index.html" class="nav-link">
+                                <i class="bx bx-message-rounded icon"></i>
+                                <span class="link">文字轉換圖片</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="img2txt_index.html" class="nav-link">
+                                <i class="bx bx-images icon"></i>
+                                <span class="link">圖片轉換文字</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="pharse_index.html" class="nav-link">
+                                <i class="bx bx-chat icon"></i>
+                                <span class="link">常用詞彙</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header_blank_div"></div>
+
+        <div class="intro_div">
+            <h1 class="intro_txt">請選擇海鮮種類</h1>
+        </div>
+
+        <div class="grid-container">
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要鮭魚');">
+                <img src="img/market/seafood/salmon.png">
+                <p>鮭魚</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要鱈魚');">
+                <img src="img/market/seafood/cod.png">
+                <p>鱈魚</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要鯛魚');">
+                <img src="img/market/seafood/sea_bream.png">
+                <p>鯛魚</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要鯖魚');">
+                <img src="img/market/seafood/mackerel.png">
+                <p>鯖魚</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要鰻魚');">
+                <img src="img/market/seafood/eel.png">
+                <p>鰻魚</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要龍蝦');">
+                <img src="img/market/seafood/lobster.png">
+                <p>龍蝦</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要蝦');">
+                <img src="img/market/seafood/shrimp.png">
+                <p>蝦</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要蟹');">
+                <img src="img/market/seafood/crab.png">
+                <p>蟹</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要貝類');">
+                <img src="img/market/seafood/shellfish.png">
+                <p>貝類</p>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay('我想要海鮮產品，會使用其他方法表達我想購買的產品');">
+                <img src="img/market/seafood/seafood_main.png">
+                <p>其他</p>
+            </div>
+
+
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="small_blank_div"></div>
+
+        <div class="back_button" onclick="window.location.href = 'img2txt_market.html';">上一頁</div>
+        <div class="footer_blank_div"></div>
+    </div>
+
+    <section class="overlay"></section>
+    <script src="js/side_bar.js"></script>
+    <script src="js/pharse_function.js"></script>
+</body>
+
+</html>

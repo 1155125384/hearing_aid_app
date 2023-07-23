@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>健聽翻譯器 --- 聽障人士</title>
+        <link rel="stylesheet" type="text/css" href="css/disorder_index.css">
+        <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    </head>
+
+    <body>
+        <div id="container">
+
+            <nav>
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">聽障人士</span>
+                </div>
+                <div class="sidebar">
+                    <div class="logo">
+                        <i class="bx bx-menu menu-icon"></i>
+                        <span class="logo-name">健聽翻譯器</span>
+                    </div>
+            
+                    <div class="sidebar-content">
+                        <ul class="lists">
+                            <li class="list">
+                                <a href="index.html" class="nav-link">
+                                    <i class="bx bx-refresh icon"></i>
+                                    <span class="link">切換角色</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="guide.html" class="nav-link">
+                                    <i class="bx bx-book-reader icon"></i>
+                                    <span class="link">用戶指引</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="txt2img.html" class="nav-link">
+                                    <i class="bx bx-message-rounded icon"></i>
+                                    <span class="link">文字轉換圖片</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="img2txt_index.html" class="nav-link">
+                                    <i class="bx bx-images icon"></i>
+                                    <span class="link">圖片轉換文字</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="pharse_index.html" class="nav-link">
+                                    <i class="bx bx-chat icon"></i>
+                                    <span class="link">常用詞彙</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header_blank_div"></div>
+
+            <div class="intro_div">
+                <h1>角色選擇：聽障人士</h1>
+            </div>
+
+            <div class="function_div">
+                <p>請選擇功能</p>
+            </div>
+
+            <div class="vertical-container">
+                <div class="function-item" onclick="window.location.href = 'img2txt_index.html';">
+                    <div class="text-container">
+                        <h2>圖片轉換文字</h2>
+                        <p>根據圖片顯示相關文字</p>
+                    </div>
+                    <i class="bx bx-image-alt icon"></i>
+                    <i class="bx bx-right-arrow-alt icon"></i>
+                    <i class="bx bx-message-dots icon"></i>
+                </div>
+                <div class="function-item" onclick="window.location.href = 'pharse_index.html';">
+                    <div class="text-container">
+                        <h2>常用詞彙</h2>
+                        <p>選擇常用詞彙協助對答</p>
+                    </div>
+                    <i class="bx bx-conversation icon"></i>
+                </div>
+            </div>
+
+            <div class="footer_div">
+                <p>------------------ 將會新增更多功能 ------------------</p>
+            </div>
+
+            <div class="footer_blank_div"></div>
+        </div>
+
+        <section class="overlay"></section>
+        <script src="js/side_bar.js"></script>
+    </body>
+</html>

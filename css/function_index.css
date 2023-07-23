@@ -1,0 +1,89 @@
+/* Common setting */
+body{
+    height: 100%;
+    overflow: hidden;
+    background: #e3f2fd;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Common Content Divs*/
+.header_blank_div{
+    height: 125px;
+}
+
+.small_blank_div {
+    height: 50px;
+}
+
+.intro_div {
+    align-items: center; 
+    justify-content: center;
+    align-self: center;
+    padding-top: 20px;
+    height: 150px; 
+}
+
+.footer_blank_div {
+    height: 150px;
+}
+
+/* Unique Divs*/
+.function_div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    width: 80%;
+    height: 200px;
+    display: flex; 
+    align-items: center; 
+    border-radius: 20px;
+    align-self: center;
+}
+
+#medical_div {
+    background-image: url("../img/function/medical.jpg");
+}
+
+#medical_div h1{
+    color: white;
+}
+
+#dine_div {
+    background-image: url("../img/function/dine.png");
+}
+
+#dine_div h1{
+    color: white;
+}
+
+#market_div {
+    background-image: url("../img/function/market.jpg"); 
+}
+
+.intro_txt{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.function_div h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.footer_div {
+    display: flex;
+    align-self: center;
+    padding-top: 20px;
+}
+
+.footer_div p {
+    color: gray;
+    font-size: 25px;
+    font-style: italic;
+}
