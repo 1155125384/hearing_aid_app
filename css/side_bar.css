@@ -19,13 +19,13 @@ nav .logo {
 }
 .logo .menu-icon {
   color: #333;
-  font-size: 40px;
+  font-size: 50px;
   margin-right: 14px;
   cursor: pointer;
 }
 .logo .logo-name {
   color: #333;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 500;
   padding-left: 15px;
 }
@@ -72,11 +72,11 @@ nav.open .sidebar {
 }
 .nav-link .icon {
   margin-right: 14px;
-  font-size: 40px;
+  font-size: 50px;
   color: #707070;
 }
 .nav-link .link {
-  font-size: 40px;
+  font-size: 50px;
   color: #707070;
   font-weight: 400;
 }

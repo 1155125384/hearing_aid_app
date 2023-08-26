@@ -1,5 +1,5 @@
 /* Common setting */
-body{
+body {
     height: 100%;
     overflow: hidden;
     background: #e3f2fd;
@@ -12,7 +12,7 @@ body{
 }
 
 /* Common Content Divs*/
-.header_blank_div{
+.header_blank_div {
     height: 125px;
 }
 
@@ -21,15 +21,15 @@ body{
 }
 
 .intro_div {
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     align-self: center;
     padding-top: 20px;
-    height: 150px; 
+    height: 150px;
 }
 
-.intro_div h1{
-    font-size: 50px;
+.intro_div h1 {
+    font-size: 60px;
     font-weight: bold;
     color: black;
 }
@@ -38,3 +38,60 @@ body{
     height: 150px;
 }
 
+/* Unique Content Divs */
+#searchInput {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding-top: 20px;
+    height: 40px;
+    width: 50%;
+    font-size: 50px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input::placeholder {
+    line-height: 10%; 
+    text-align: center;
+}
+  
+.confirm_button {
+    display: inline-block;
+    padding: 15px 30px;
+    height: 50px;
+    width: 30%;
+    align-self: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #243e88;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#imageContainer {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+    height: 700px;
+    width: 70%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+
+#imageContainer img {
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
