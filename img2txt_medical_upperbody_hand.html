@@ -4,6 +4,7 @@
         <title>圖片轉換文字（醫療）</title>
         <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
         <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     </head>
 
@@ -64,54 +65,54 @@
                 <h1>請選擇於手臂的症狀</h1>
             </div>
 
-            <div class="description_div" id="brief">
-                <div class="question_div" onclick="showFullScreenOverlay('手臂疼痛');">
+            <div class="grid-container">
+
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂疼痛');">
+                    <img src="img/medical/upperbody/hand/arm_pain.png">
                     <h1>手臂疼痛</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂無力');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂無力');">
+                    <img src="img/medical/upperbody/hand/arm_weakness.png">
                     <h1>手臂無力</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂感覺麻木');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂感覺麻木');">
+                    <img src="img/medical/upperbody/hand/numbness.png">
                     <h1>感覺麻木</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂肌肉抽筋');">
-                    <h1>肌肉抽筋</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂腫脹');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂腫脹');">
+                    <img src="img/medical/upperbody/hand/arm_swelling.png">
                     <h1>手臂腫脹</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂關節疼痛');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂關節疼痛');">
+                    <img src="img/medical/upperbody/hand/joint_pain.png">
                     <h1>關節疼痛</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂運動受限');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('手臂運動受限');">
+                    <img src="img/medical/upperbody/hand/limited_range_of_motion.png">
                     <h1>運動受限</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂肌肉痙攣');">
-                    <h1>肌肉痙攣</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂肌肉無力');">
-                    <h1>肌肉無力</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('手臂感覺異常');">
-                    <h1>感覺異常</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在手臂的位置');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在手臂');">
+                    <img src="img/medical/upperbody/hand/other.png">
                     <h1>其他</h1>
                 </div>
-                
+            
                 <div id="overlay_function" onclick="hideFullScreenOverlay();">
                     <div id="overlayContent">
                         <h1 id="overlaySentence"></h1>
+                        <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                        <div class="slider-labels">
+                            <span>輕微</span>
+                            <span>痛苦</span>
+                            <span>嚴重</span>
+                        </div>
+                        <p id="sliderResult"></p>
+                        <br><br>
                         <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                     </div>
                 </div>

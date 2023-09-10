@@ -4,6 +4,7 @@
         <title>圖片轉換文字（醫療）</title>
         <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
         <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     </head>
 
@@ -64,46 +65,54 @@
                 <h1>請選擇於喉嚨的症狀</h1>
             </div>
 
-            <div class="description_div" id="brief">
-                <div class="question_div" onclick="showFullScreenOverlay('咳嗽');">
+            <div class="grid-container">
+
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('咳嗽');">
+                    <img src="img/medical/head/throat/cough.png">
                     <h1>咳嗽</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('喉嚨痛');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('喉嚨痛');">
+                    <img src="img/medical/head/throat/sore_throat.png">
                     <h1>喉嚨痛</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('喉嚨發炎');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('喉嚨發炎');">
+                    <img src="img/medical/head/throat/throat_inflammation.png">
                     <h1>喉嚨發炎</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('喉嚨痕癢');">
-                    <h1>喉嚨痕癢</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('喉嚨腫脹');">
-                    <h1>喉嚨腫脹</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('喉嚨痰多');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('喉嚨痰多');">
+                    <img src="img/medical/head/throat/excessive_phlegm.png">
                     <h1>喉嚨痰多</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('嗓子沙啞');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('嗓子沙啞');">
+                    <img src="img/medical/head/throat/hoarse_voice.png">
                     <h1>嗓子沙啞</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('吞嚥困難');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('吞嚥困難');">
+                    <img src="img/medical/head/throat/swallowing_difficulty.png">
                     <h1>吞嚥困難</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在喉嚨的位置');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在喉嚨');">
+                    <img src="img/medical/head/throat/other.png">
                     <h1>其他</h1>
                 </div>
                 
                 <div id="overlay_function" onclick="hideFullScreenOverlay();">
                     <div id="overlayContent">
                         <h1 id="overlaySentence"></h1>
+                        <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                        <div class="slider-labels">
+                            <span>輕微</span>
+                            <span>痛苦</span>
+                            <span>嚴重</span>
+                        </div>
+                        <p id="sliderResult"></p>
+                        <br><br>
                         <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                     </div>
                 </div>

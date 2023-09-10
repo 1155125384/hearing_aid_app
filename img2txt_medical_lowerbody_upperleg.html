@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -65,48 +66,49 @@
             <h1>請選擇於大腿的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
+        <div class="grid-container">
 
-            <div class="question_div" onclick="showFullScreenOverlay('大腿疼痛');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('大腿疼痛');">
+                <img src="img/medical/lowerbody/upperleg/leg_pain.png">
                 <h1>大腿疼痛</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('大腿肌肉痙攣');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('肌肉痙攣');">
+                <img src="img/medical/lowerbody/upperleg/muscle_spasm.png">
                 <h1>肌肉痙攣</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('大腿肌肉無力');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('肌肉無力');">
+                <img src="img/medical/lowerbody/upperleg/muscle_weakness.png">
                 <h1>肌肉無力</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('大腿腫脹');">
-                <h1>大腿腫脹</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('大腿運動受限');">
-                <h1>大腿運動受限</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('大腿肌肉抽筋');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('肌肉抽筋');">
+                <img src="img/medical/lowerbody/upperleg/muscle_cramp.png">
                 <h1>肌肉抽筋</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('大腿感覺異常');">
-                <h1>感覺異常</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('大腿肌肉拉傷或扭傷');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('肌肉拉傷或扭傷');">
+                <img src="img/medical/lowerbody/upperleg/muscle_strain_sprain.png">
                 <h1>肌肉拉傷或扭傷</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在大腿的位置');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('其他');">
+                <img src="img/medical/lowerbody/upperleg/other.png">
                 <h1>其他</h1>
             </div>
-
 
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>
@@ -115,7 +117,7 @@
         <div class="small_blank_div"></div>
 
         <button class="go_back_button" onclick="window.location.href = 'img2txt_medical_lowerbody.html';">上一頁</button>
-        <div class = "small_blank_div"></div>
+        <div class="small_blank_div"></div>
         <button class="swap_button" onclick="window.location.href = 'phrase_medical.html';">轉到常用詞彙（醫療）</button>
         <div class="footer_blank_div"></div>
 

@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -65,52 +66,54 @@
             <h1>請選擇於背部的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
+        <div class="grid-container">
 
-            <div class="question_div" onclick="showFullScreenOverlay('背部疼痛');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部疼痛');">
+                <img src="img/medical/upperbody/back/back_pain.png">
                 <h1>背部疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部僵硬');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部僵硬');">
+                <img src="img/medical/upperbody/back/back_stiffness.png">
                 <h1>背部僵硬</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部肌肉痙攣');">
-                <h1>肌肉痙攣</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部腫脹');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部腫脹');">
+                <img src="img/medical/upperbody/back/swelling.png">
                 <h1>背部腫脹</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部感覺麻木');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部感覺麻木');">
+                <img src="img/medical/upperbody/back/numbness.png">
                 <h1>感覺麻木</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部運動受限');">
-                <h1>運動受限</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部肌肉無力');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部肌肉無力');">
+                <img src="img/medical/upperbody/back/muscle_weakness.jpg">
                 <h1>肌肉無力</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部感覺異常');">
-                <h1>感覺異常</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('背部脊椎彎曲');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('背部脊椎彎曲');">
+                <img src="img/medical/upperbody/back/spinal_curvature.png">
                 <h1>脊椎彎曲</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在背部的位置');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在背部');">
+                <img src="img/medical/upperbody/back/other.png">
                 <h1>其他</h1>
             </div>
-
-
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>

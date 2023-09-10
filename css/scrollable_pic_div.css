@@ -146,3 +146,38 @@ body {
 .go_back_button:hover {
     background-color: #14244e;
 }
+
+#sliderResult {
+    font-size: 50px;
+    margin: 50px;
+}
+
+#severitySlider {
+    width: 700px;
+}
+
+#severitySlider::-webkit-slider-thumb {
+    -webkit-transform: scale(3); /* Set the desired scale factor */
+    transform: scale(3); /* Set the desired scale factor */
+}
+
+#severitySlider::-moz-range-thumb {
+    -moz-transform: scale(3); /* Set the desired scale factor */
+    transform: scale(3); /* Set the desired scale factor */
+}
+
+.slider-labels {
+    width: 700px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.slider-labels span {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+}

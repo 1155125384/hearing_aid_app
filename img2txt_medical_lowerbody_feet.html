@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -62,55 +63,57 @@
         <div class="header_blank_div"></div>
 
         <div class="intro_div">
-            <h1>請選擇於頭的症狀</h1>
+            <h1>請選擇於足部的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
+        <div class="grid-container">
 
-            <div class="question_div" onclick="showFullScreenOverlay('腳面疼痛');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腳面疼痛');">
+                <img src="img/medical/lowerbody/feet/foot_pain.png">
                 <h1>腳面疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腳踝疼痛');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腳踝疼痛');">
+                <img src="img/medical/lowerbody/feet/ankle_pain.png">
                 <h1>腳踝疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腳底疼痛');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腳底疼痛');">
+                <img src="img/medical/lowerbody/feet/sole_pain.png">
                 <h1>腳底疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('足弓疼痛');">
-                <h1>足弓疼痛</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腳踝腫脹');">
-                <h1>腳踝腫脹</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('足部感覺麻木');">
-                <h1>感覺麻木</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('足部肌肉痙攣');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('足部肌肉痙攣');">
+                <img src="img/medical/lowerbody/feet/muscle_spasm.png">
                 <h1>肌肉痙攣</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腳踝扭傷或韌帶損傷');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腳踝扭傷或韌帶損傷');">
+                <img src="img/medical/lowerbody/feet/ankle_sprain_ligament_injury.png">
                 <h1>腳踝扭傷或韌帶損傷</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('足部運動受限');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('足部運動受限');">
+                <img src="img/medical/lowerbody/feet/limited_mobility.png">
                 <h1>運動受限</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在足部、腳踝的位置');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在足部');">
+                <img src="img/medical/lowerbody/feet/other.png">
                 <h1>其他</h1>
             </div>
-
-
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>

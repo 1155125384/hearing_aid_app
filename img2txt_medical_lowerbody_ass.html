@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -62,37 +63,42 @@
         <div class="header_blank_div"></div>
 
         <div class="intro_div">
-            <h1>請選擇於股部、尾骨的症狀</h1>
+            <h1>請選擇於臀部、尾骨的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
-            <div class="question_div" onclick="showFullScreenOverlay('股部位置疼痛');">
-                <h1>股部位置疼痛</h1>
-            </div>
+        <div class="grid-container">
 
-            <div class="question_div" onclick="showFullScreenOverlay('股肌痙攣');">
-                <h1>股肌痙攣</h1>
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('臀部位置疼痛');">
+                <img src="img/medical/lowerbody/ass/position_pain.png">
+                <h1>臀部位置疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尾骨骨折');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尾骨骨折');">
+                <img src="img/medical/lowerbody/ass/tailbone_fracture.png">
                 <h1>尾骨骨折</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尾骨囊腫');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尾骨囊腫');">
+                <img src="img/medical/lowerbody/ass/tailbone_cyst.png">
                 <h1>尾骨囊腫</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('股部位置感覺麻木');">
-                <h1>感覺麻木</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('其他');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('其他');">
+                <img src="img/medical/lowerbody/ass/other.png">
                 <h1>其他</h1>
             </div>
-
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>

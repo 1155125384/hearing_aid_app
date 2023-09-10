@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -65,99 +66,61 @@
             <h1>請選擇於腹部、内臟的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
-            <div class="question_div" onclick="showFullScreenOverlay('消化不良');">
+        <div class="grid-container">
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('消化不良');">
+                <img src="img/medical/upperbody/stomach/indigestion.png">
                 <h1>消化不良</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('便秘');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('便秘');">
+                <img src="img/medical/upperbody/stomach/constipation.png">
                 <h1>便秘</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('食慾不振');">
-                <h1>食慾不振</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('不斷嘔吐');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('不斷嘔吐');">
+                <img src="img/medical/upperbody/stomach/continuous_vomiting.png">
                 <h1>不斷嘔吐</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('不斷嗝氣');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('不斷嗝氣');">
+                <img src="img/medical/upperbody/stomach/continuous_burping.png">
                 <h1>不斷嗝氣</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('大便帶血');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('大便帶血');">
+                <img src="img/medical/upperbody/stomach/bloody_stool.png">
                 <h1>大便帶血</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部位置瘙癢');">
-                <h1>腹部位置瘙癢</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部位置灼熱感');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腹部位置灼熱感');">
+                <img src="img/medical/upperbody/stomach/burning_sensation_in_abdomen.png">
                 <h1>腹部位置灼熱感</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部位置脹通');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('腹部位置脹通');">
+                <img src="img/medical/upperbody/stomach/bloating_in_abdomen.png">
                 <h1>腹部位置脹通</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部不規則蠕動感');">
-                <h1>腹部不規則蠕動感</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部位置隱痛');">
-                <h1>腹部位置隱痛</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腹部位置出現瘀血');">
-                <h1>腹部位置出現瘀血</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('肝區不適');">
-                <h1>肝區不適</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('黃疸');">
-                <h1>黃疸</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('膽結石');">
-                <h1>膽結石</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胃部疼痛');">
-                <h1>胃部疼痛</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胃灼熱感');">
-                <h1>胃灼熱感</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胃脹');">
-                <h1>胃脹</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胃酸逆流');">
-                <h1>胃酸逆流</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('脾臟腫大');">
-                <h1>脾臟腫大</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('腸鳴音增加');">
-                <h1>腸鳴音增加</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在腹部、内臟的位置');">
+        
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在腹部、内臟');">
+                <img src="img/medical/upperbody/stomach/other.png">
                 <h1>其他</h1>
             </div>
-
-
+        
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>

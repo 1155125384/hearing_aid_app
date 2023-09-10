@@ -1,127 +1,131 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>圖片轉換文字（醫療）</title>
-        <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
-        <link rel="stylesheet" type="text/css" href="css/side_bar.css">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
-    </head>
 
-    <body>
-        <div id="container">
+<head>
+    <title>圖片轉換文字（醫療）</title>
+    <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
+    <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+</head>
 
-            <nav>
+<body>
+    <div id="container">
+
+        <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">圖片轉換文字（醫療）</span>
+            </div>
+            <div class="sidebar">
                 <div class="logo">
                     <i class="bx bx-menu menu-icon"></i>
-                    <span class="logo-name">圖片轉換文字（醫療）</span>
+                    <span class="logo-name">健聽翻譯器</span>
                 </div>
-                <div class="sidebar">
-                    <div class="logo">
-                        <i class="bx bx-menu menu-icon"></i>
-                        <span class="logo-name">健聽翻譯器</span>
-                    </div>
-            
-                    <div class="sidebar-content">
-                        <ul class="lists">
-                            <li class="list">
-                                <a href="index.html" class="nav-link">
-                                    <i class="bx bx-refresh icon"></i>
-                                    <span class="link">切換角色</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <a href="guide.html" class="nav-link">
-                                    <i class="bx bx-book-reader icon"></i>
-                                    <span class="link">用戶指引</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <a href="txt2img_index.html" class="nav-link">
-                                    <i class="bx bx-message-rounded icon"></i>
-                                    <span class="link">文字轉換圖片</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <a href="img2txt_index.html" class="nav-link">
-                                    <i class="bx bx-images icon"></i>
-                                    <span class="link">圖片轉換文字</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <a href="pharse_index.html" class="nav-link">
-                                    <i class="bx bx-chat icon"></i>
-                                    <span class="link">常用詞彙</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
-            <div class="header_blank_div"></div>
-
-            <div class="intro_div">
-                <h1>請選擇於小腿的症狀</h1>
-            </div>
-
-            <div class="description_div" id="brief">
-
-                <div class="question_div" onclick="showFullScreenOverlay('小腿疼痛');">
-                    <h1>小腿疼痛</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿肌肉痙攣');">
-                    <h1>肌肉痙攣</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿肌肉無力');">
-                    <h1>肌肉無力</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿腫脹');">
-                    <h1>小腿腫脹</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿運動受限');">
-                    <h1>小腿運動受限</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿肌肉抽筋');">
-                    <h1>肌肉抽筋</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿感覺異常');">
-                    <h1>感覺異常</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('小腿肌肉拉傷或扭傷');">
-                    <h1>肌肉拉傷或扭傷</h1>
-                  </div>
-                  
-                  <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在小腿的位置');">
-                    <h1>其他</h1>
-                  </div>
-                  
-                
-                <div id="overlay_function" onclick="hideFullScreenOverlay();">
-                    <div id="overlayContent">
-                        <h1 id="overlaySentence"></h1>
-                        <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
-                    </div>
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="index.html" class="nav-link">
+                                <i class="bx bx-refresh icon"></i>
+                                <span class="link">切換角色</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="guide.html" class="nav-link">
+                                <i class="bx bx-book-reader icon"></i>
+                                <span class="link">用戶指引</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="txt2img_index.html" class="nav-link">
+                                <i class="bx bx-message-rounded icon"></i>
+                                <span class="link">文字轉換圖片</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="img2txt_index.html" class="nav-link">
+                                <i class="bx bx-images icon"></i>
+                                <span class="link">圖片轉換文字</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="pharse_index.html" class="nav-link">
+                                <i class="bx bx-chat icon"></i>
+                                <span class="link">常用詞彙</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-            <div class = "small_blank_div"></div>
+        <div class="header_blank_div"></div>
 
-            <button class="go_back_button" onclick="window.location.href = 'img2txt_medical_lowerbody.html';">上一頁</button>
-            <div class = "small_blank_div"></div>
-            <button class="swap_button" onclick="window.location.href = 'phrase_medical.html';">轉到常用詞彙（醫療）</button>
-            <div class="footer_blank_div"></div>
-
+        <div class="intro_div">
+            <h1>請選擇於小腿的症狀</h1>
         </div>
 
-        <section class="overlay"></section>
-        <script src="js/side_bar.js"></script>
-        <script src="js/pharse_function.js"></script>
-    </body>
+        <div class="grid-container">
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('小腿疼痛');">
+                <img src="img/medical/lowerbody/lowerleg/leg_pain.png">
+                <h1>小腿疼痛</h1>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('小腿肌肉痙攣');">
+                <img src="img/medical/lowerbody/lowerleg/muscle_spasm.png">
+                <h1>肌肉痙攣</h1>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('小腿肌肉無力');">
+                <img src="img/medical/lowerbody/lowerleg/muscle_weakness.png">
+                <h1>肌肉無力</h1>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('小腿肌肉抽筋');">
+                <img src="img/medical/lowerbody/lowerleg/muscle_cramp.png">
+                <h1>肌肉抽筋</h1>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('小腿肌肉拉傷或扭傷');">
+                <img src="img/medical/lowerbody/lowerleg/muscle_strain_sprain.png">
+                <h1>肌肉拉傷或扭傷</h1>
+            </div>
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在小腿');">
+                <img src="img/medical/lowerbody/lowerleg/other.png">
+                <h1>其他</h1>
+            </div>
+
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="small_blank_div"></div>
+
+        <button class="go_back_button" onclick="window.location.href = 'img2txt_medical_lowerbody.html';">上一頁</button>
+        <div class="small_blank_div"></div>
+        <button class="swap_button" onclick="window.location.href = 'phrase_medical.html';">轉到常用詞彙（醫療）</button>
+        <div class="footer_blank_div"></div>
+
+    </div>
+
+    <section class="overlay"></section>
+    <script src="js/side_bar.js"></script>
+    <script src="js/pharse_function.js"></script>
+</body>
+
 </html>

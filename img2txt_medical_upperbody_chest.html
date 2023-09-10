@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css" />
     <link rel="stylesheet" type="text/css" href="css/side_bar.css" />
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
 </head>
 
@@ -64,53 +65,55 @@
             <h1>請選擇於胸、肺、心臟的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
-            <div class="question_div" onclick="showFullScreenOverlay('胸部疼痛');">
+        <div class="grid-container">
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('胸部疼痛');">
+                <img src="img/medical/upperbody/chest/chest_pain.png">
                 <h1>胸部疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('呼吸困難');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('呼吸困難');">
+                <img src="img/medical/upperbody/chest/breathing_difficulty.png">
                 <h1>呼吸困難</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('心悸');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('心悸');">
+                <img src="img/medical/upperbody/chest/palpitations.png">
                 <h1>心悸</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胸悶感');">
-                <h1>胸悶感</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('呼吸急促');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('呼吸急促');">
+                <img src="img/medical/upperbody/chest/shortness_of_breath.png">
                 <h1>呼吸急促</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('胸部壓迫感');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('胸部壓迫感');">
+                <img src="img/medical/upperbody/chest/chest_pressure.png">
                 <h1>胸部壓迫感</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('喘息異常');">
-                <h1>喘息異常</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('心跳異常');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('心跳異常');">
+                <img src="img/medical/upperbody/chest/irregular_heartbeat.png">
                 <h1>心跳異常</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('呼吸聲音異常');">
-                <h1>呼吸聲音異常</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在胸、肺、心臟的位置');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在胸、肺、心臟');">
+                <img src="img/medical/upperbody/chest/other.png">
                 <h1>其他</h1>
             </div>
-
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
-                    <button class="go_back_button" onclick="hideFullScreenOverlay();">
-                        返回
-                    </button>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>
         </div>

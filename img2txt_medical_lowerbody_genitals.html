@@ -5,6 +5,7 @@
     <title>圖片轉換文字（醫療）</title>
     <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
     <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+    <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 
@@ -65,58 +66,59 @@
             <h1>請選擇於膀胱、生殖器的症狀</h1>
         </div>
 
-        <div class="description_div" id="brief">
-            <div class="question_div" onclick="showFullScreenOverlay('尿頻');">
+        <div class="grid-container">
+
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尿頻');">
+                <img src="img/medical/lowerbody/genitals/frequent_urination.png">
                 <h1>尿頻</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尿急');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尿急');">
+                <img src="img/medical/lowerbody/genitals/urinary_urgency.png">
                 <h1>尿急</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尿失禁');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尿失禁');">
+                <img src="img/medical/lowerbody/genitals/urinary_incontinence.png">
                 <h1>尿失禁</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尿痛');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尿痛');">
+                <img src="img/medical/lowerbody/genitals/urination_pain.png">
                 <h1>尿痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尿血');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('尿血');">
+                <img src="img/medical/lowerbody/genitals/urine_bleeding.png">
                 <h1>尿血</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('深色尿液');">
-                <h1>深色尿液</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('小便困難');">
-                <h1>小便困難</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('膀胱疼痛');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('膀胱疼痛');">
+                <img src="img/medical/lowerbody/genitals/bladder_pain.png">
                 <h1>膀胱疼痛</h1>
             </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('尿道疼痛');">
-                <h1>尿道疼痛</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('性器官疼痛');">
+        
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('性器官疼痛');">
+                <img src="img/medical/lowerbody/genitals/genital_pain.png">
                 <h1>性器官疼痛</h1>
             </div>
 
-            <div class="question_div" onclick="showFullScreenOverlay('生殖器異常分泌');">
-                <h1>生殖器異常分泌</h1>
-            </div>
-
-            <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在膀胱、生殖器的位置');">
+            <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在膀胱、生殖器');">
+                <img src="img/medical/lowerbody/genitals/other.png">
                 <h1>其他</h1>
             </div>
-
+        
             <div id="overlay_function" onclick="hideFullScreenOverlay();">
                 <div id="overlayContent">
                     <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
+                    </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
                     <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>

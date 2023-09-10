@@ -4,6 +4,7 @@
         <title>圖片轉換文字（醫療）</title>
         <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
         <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     </head>
 
@@ -63,41 +64,58 @@
             <div class="intro_div">
                 <h1>請選擇於眼睛的症狀</h1>
             </div>
-
-            <div class="description_div" id="brief">
-                <div class="question_div" onclick="showFullScreenOverlay('眼睛刺痛');">
+            
+            <div class="grid-container">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('眼睛刺痛');">
+                    <img src="img/medical/head/eye/eye_pain.png">
                     <h1>眼睛刺痛</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('視力模糊');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('視力模糊');">
+                    <img src="img/medical/head/eye/blurred_vision.png">
                     <h1>視力模糊</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('眼疲勞');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('眼疲勞');">
+                    <img src="img/medical/head/eye/eye_fatigue.png">
                     <h1>眼疲勞</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('眼乾');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('眼乾');">
+                    <img src="img/medical/head/eye/dry_eyes.png">
                     <h1>眼乾</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('眼睛紅腫');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('眼睛紅腫');">
+                    <img src="img/medical/head/eye/red_swollen_eyes.png">
                     <h1>眼睛紅腫</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('眼睛痕癢');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('眼睛痕癢');">
+                    <img src="img/medical/head/eye/eye_itching.png">
                     <h1>眼睛痕癢</h1>
                 </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在眼睛的位置');">
+            
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在眼睛');">
+                    <img src="img/medical/head/eye/other.png">
                     <h1>其他</h1>
                 </div>
-                
-                <div id="overlay_function" onclick="hideFullScreenOverlay();">
-                    <div id="overlayContent">
-                        <h1 id="overlaySentence"></h1>
-                        <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+            
+            </div>
+            
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                    <div class="slider-labels">
+                        <span>輕微</span>
+                        <span>痛苦</span>
+                        <span>嚴重</span>
                     </div>
+                    <p id="sliderResult"></p>
+                    <br><br>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                 </div>
             </div>
 

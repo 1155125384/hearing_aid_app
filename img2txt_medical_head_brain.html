@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>圖片轉換文字（醫療）</title>
-        <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
+        <link rel="stylesheet" type="text/css" href="css/scrollable_pic_div.css">
         <link rel="stylesheet" type="text/css" href="css/side_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/phrase_function.css">
         <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     </head>
 
@@ -64,41 +65,58 @@
                 <h1>請選擇於頭、大腦的症狀</h1>
             </div>
 
-            <div class="description_div" id="brief">
-                <div class="question_div" onclick="showFullScreenOverlay('發燒');">
-                    <h1>發燒</h1>
-                </div>
+            <div class="grid-container">
 
-                <div class="question_div" onclick="showFullScreenOverlay('頭痛');">
-                    <h1>頭痛</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('頭暈');">
-                    <h1>頭暈</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('記憶力問題');">
-                    <h1>記憶力問題</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('意識不清');">
-                    <h1>意識不清</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('失眠');">
-                    <h1>失眠</h1>
-                </div>
-
-                <div class="question_div" onclick="showFullScreenOverlay('我有其他不常見症狀在頭、大腦的位置');">
-                    <h1>其他</h1>
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('發燒');">
+                    <img src="img/medical/head/brain/fever.png">
+                    <p>發燒</p>
                 </div>
                 
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('頭痛');">
+                    <img src="img/medical/head/brain/headache.png">
+                    <p>頭痛</p>
+                </div>
+                
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('頭暈');">
+                    <img src="img/medical/head/brain/dizziness.png">
+                    <p>頭暈</p>
+                </div>
+                
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('記憶力問題');">
+                    <img src="img/medical/head/brain/memory.png">
+                    <p>記憶力問題</p>
+                </div>
+                
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('意識不清');">
+                    <img src="img/medical/head/brain/confusion.png">
+                    <p>意識不清</p>
+                </div>
+                
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('失眠');">
+                    <img src="img/medical/head/brain/insomnia.png">
+                    <p>失眠</p>
+                </div>
+                
+                <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在頭、大腦');">
+                    <img src="img/medical/head/brain/other.png">
+                    <p>其他</p>
+                </div>
+    
                 <div id="overlay_function" onclick="hideFullScreenOverlay();">
                     <div id="overlayContent">
                         <h1 id="overlaySentence"></h1>
+                        <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+                        <div class="slider-labels">
+                            <span>輕微</span>
+                            <span>痛苦</span>
+                            <span>嚴重</span>
+                        </div>
+                        <p id="sliderResult"></p>
+                        <br><br>
                         <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
                     </div>
                 </div>
+    
             </div>
 
             <div class = "small_blank_div"></div>

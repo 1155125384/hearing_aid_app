@@ -1,0 +1,134 @@
+given this is a.html:
+
+<div class="grid-container">
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳鳴');">
+        <img src="img/medical/head/ear/tinnitus.png">
+        <h1>耳鳴</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳朵疼痛');">
+        <img src="img/medical/head/ear/ear_pain.png">
+        <h1>耳朵疼痛</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('聽力下降');">
+        <img src="img/medical/head/ear/hearing_loss.png">
+        <h1>聽力下降</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳朵堵塞');">
+        <img src="img/medical/head/ear/ear_blockage.png">
+        <h1>耳朵堵塞</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳朵出血');">
+        <img src="img/medical/head/ear/ear_bleeding.png">
+        <h1>耳朵出血</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳道內異物感');">
+        <img src="img/medical/head/ear/foreign_body_sensation.png">
+        <h1>耳道內異物感</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('耳朵痕癢');">
+        <img src="img/medical/head/ear/ear_itching.png">
+        <h1>耳朵痕癢</h1>
+    </div>
+
+    <div class="grid-item" onclick="showFullScreenOverlay_medical('我有症狀在耳朵');">
+        <img src="img/medical/head/ear/other.png">
+        <h1>其他</h1>
+    </div>
+
+    <div id="overlay_function" onclick="hideFullScreenOverlay();">
+        <div id="overlayContent">
+            <h1 id="overlaySentence"></h1>
+            <input type="range" min="1" max="9" value="1" class="slider" id="severitySlider">
+            <div class="slider-labels">
+                <span>輕微</span>
+                <span>痛苦</span>
+                <span>嚴重</span>
+            </div>
+            <p id="sliderResult"></p>
+            <br><br>
+            <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+        </div>
+    </div>
+</div>
+
+this is b.html:
+
+ 
+<div class="description_div" id="brief">
+            <div class="question_div" onclick="showFullScreenOverlay('消化不良');">
+                <h1>消化不良</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('便秘');">
+                <h1>便秘</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('食慾不振');">
+                <h1>食慾不振</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('不斷嘔吐');">
+                <h1>不斷嘔吐</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('不斷嗝氣');">
+                <h1>不斷嗝氣</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('大便帶血');">
+                <h1>大便帶血</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('腹部位置瘙癢');">
+                <h1>腹部位置瘙癢</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('腹部位置灼熱感');">
+                <h1>腹部位置灼熱感</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('腹部位置脹通');">
+                <h1>腹部位置脹通</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('腹部不規則蠕動感');">
+                <h1>腹部不規則蠕動感</h1>
+            </div>
+
+            <div class="question_div" onclick="showFullScreenOverlay('我有症狀在腹部、内臟');">
+                <h1>其他</h1>
+            </div>
+
+
+            <div id="overlay_function" onclick="hideFullScreenOverlay();">
+                <div id="overlayContent">
+                    <h1 id="overlaySentence"></h1>
+                    <button class="go_back_button" onclick="hideFullScreenOverlay();">返回</button>
+                </div>
+            </div>
+        </div>
+
+
+
+I want to modify b.html by refer to a.html, where to add photo and a screenoverlay, 
+given that the photo src path in b.html is 
+img/medical/upperbody/stomach/xxx.png 
+according to chinese wordings and transalte it to english, just change the url name, no need change the display name
+
+all question_div to be grid-item
+description_div to grid-container
+all showFullScreenOverlay to showFullScreenOverlay_medical
+modify the whole overlay_function same as a.html, and the id name in b.html keep as overlay_function
+hideFullScreenOverlay remain same
+keep the display to be chinese
+
+
+
+Please give me the modified b.html
